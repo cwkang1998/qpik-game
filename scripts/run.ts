@@ -2,7 +2,16 @@ import { ethers } from "hardhat";
 
 const main = async () => {
   const gameContractFactory = await ethers.getContractFactory("QpikGame");
-  const gameContract = await gameContractFactory.deploy();
+  const gameContract = await gameContractFactory.deploy(
+    ["LightingCat", "ShoeCat", "BowlCat"],
+    [
+      "https://media.giphy.com/media/BzyTuYCmvSORqs1ABM/giphy.gif",
+      "https://media.giphy.com/media/8vQSQ3cNXuDGo/giphy.gif",
+      "https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif",
+    ],
+    [50, 200, 100],
+    [100, 50, 75]
+  );
 
   await gameContract.deployed();
   console.log("Contract deployed to:", gameContract.address);
