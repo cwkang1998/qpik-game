@@ -10,7 +10,11 @@ const main = async () => {
       "https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif",
     ],
     [50, 200, 100],
-    [100, 50, 75]
+    [100, 50, 75],
+    "Dog Artist",
+    "https://media.giphy.com/media/4y6DqPvlICp5S/giphy.gif",
+    10000,
+    20
   );
 
   await gameContract.deployed();
