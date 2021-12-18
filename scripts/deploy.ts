@@ -19,17 +19,6 @@ const main = async () => {
 
   await gameContract.deployed();
   console.log("Contract deployed to:", gameContract.address);
-
-  let txn = await gameContract.mintCharacterNFT(2);
-  await txn.wait();
-
-  txn = await gameContract.attackBoss();
-  await txn.wait();
-
-  txn = await gameContract.attackBoss();
-  await txn.wait();
-
-  console.log("Done deploying and minting!");
 };
 
 const runMain = async () => {
